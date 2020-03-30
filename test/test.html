@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mtns-skein-hash-js Browser-test</title>
+</head>
+<p><b>mtns-skein-hash Browser-test</b></p>
+<script src="../dist/skein-hash.min.js"></script>
+<script>
+    var myskein = require('skeinhash');
+    var dorun = 'Run skein hash';
+    var empty = '';
+    var result = ('empty string = ' + (myskein.digest(empty) === "bc5b4c50925519c290cc634277ae3d6257212395cba733bbad37a4af0fa06af4" ? 'Pass' : 'Fail'));
+    result += '<br>' + ('dorun string = ' + (myskein.digest(dorun) === "74ef4926a2839af2f83efcab24c30127fc9170ee00f2b2134cb13db5846fc5f7" ? 'Pass' : 'Fail'));
+    document.write(result);
+</script>
+</body>
+</html>
